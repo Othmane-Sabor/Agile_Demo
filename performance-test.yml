@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    # Runs at 12 noon every Sunday
-    - cron: '0 12 * * 0'
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
 
 jobs:
   test-performance:
@@ -20,6 +20,6 @@ jobs:
         python-version: '3.8'
     - name: Install dependencies
       run: |
-        pip install logging
+        pip install pytest # Change this to pytest since we are using it in the test script
     - name: Run performance tests
-      run: python3 ./test_sorting.py
+      run: pytest ./test_sorting.py  # Changed to use pytest to run your performance tests
