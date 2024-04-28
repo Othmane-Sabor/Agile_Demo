@@ -22,4 +22,4 @@ jobs:
       run: |
         pip install pytest # Change this to pytest since we are using it in the test script
     - name: Run performance tests
-      run: pytest ./test_sorting.py  # Changed to use pytest to run your performance tests
+      run: pytest ./test_sorting.py
