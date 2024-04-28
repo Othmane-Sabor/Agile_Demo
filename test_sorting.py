@@ -27,7 +27,7 @@ def quick_sort(arr):
 
 @pytest.mark.parametrize("sort_function", [bubble_sort, quick_sort])
 def test_sort_performance(sort_function):
-    data = [random.randint(1, 10000) for _ in range(1000)]
+    data = [random.randint(1, 100000) for _ in range(10000)]
     sorted_data = sorted(data)
 
     start_time = time.time()
