@@ -1,0 +1,25 @@
+name: Performance Test Sorting Algorithms
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # Runs at 12 noon every Sunday
+    - cron: '0 12 * * 0'
+
+jobs:
+  test-performance:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: |
+        pip install logging
+    - name: Run performance tests
+      run: python3 ./test_sorting.py
