@@ -34,3 +34,4 @@ def test_sort_performance(sort_function):
 
     # Performance threshold example
     assert duration < 2, f"Sorting took too long with {sort_function.__name__}"
+
