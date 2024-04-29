@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install pytest
-²
+
     - name: Run performance tests for bubble_sort
       continue-on-error: true
       run: pytest -s ./test_sorting.py::test_sort_performance[bubble_sort]
